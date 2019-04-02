@@ -1,11 +1,13 @@
-# coded by github.com/thelinuxchoice/anonymouse
+#!/usr/bin/env python3
+
 import requests
 
-print("\nAnonymous Email by anonymouse.org")
-print("coded by github.com/thelinuxchoice\n")
-to = raw_input('to: ')
-subject = raw_input('subject: ')
-message = raw_input('message: ')
+print("\n[i] Anonymous Email by anonymouse.org")
+print("[w] This will send e-mail over plain HTTP, so it can read by anyone snooping this connection.\n")
+
+to = input('to: ')
+subject = input('subject: ')
+message = input('message: ')
 
 user_agent = 'Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0'
 sess = requests.Session()
@@ -28,5 +30,3 @@ email_req = sess.post('http://anonymouse.org/cgi-bin/anon-email.cgi', headers={
 if 'The e-mail has been sent' in email_req.text:
     print("[+] Email Sent!")
     print("[+] In order to increase your privacy, the anonymous e-mail will be randomly delayed up to 12 hours")
-
-
