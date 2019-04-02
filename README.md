@@ -1,5 +1,5 @@
 # anonymouse
-Python script to send anonymous email using anonymouse.org
+Python 3 script to send anonymous email using anonymouse.org
 
 
 ## Install
